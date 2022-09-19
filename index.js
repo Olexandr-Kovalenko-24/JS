@@ -26,11 +26,11 @@
 
 function isEven() {
 let number = prompt('Write the number');
-calculate (number);
+console.log(number%2 === 0);
 }
 
-function calculate(num) {
-console.log(num%2 === 0);
-}
+// function calculate(num) {
+// console.log(num%2 === 0);
+// }
 
 isEven()
