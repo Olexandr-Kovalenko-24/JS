@@ -1,36 +1,26 @@
-// function getSumOfTwo(a, b) {
-//     let result = a + b;
-//     return result;
+// function getValueFromUser () {
+// let userName = prompt('Your name is');
+// sayHello (userName);
 // }
 
-// const res = getSumOfTwo(2, 3);
-// console.log(res);
-
-// function getMultipliceOfTwo(a, b) {
-//     return a * b;
+// function sayHello (name) {
+//     console.log('Hello ' + name);
 // }
 
-// const res2 = getMultipliceOfTwo(2, 3);
-// console.log(res2);
+// getValueFromUser();
 
 
-// function getBigOfTwoNumbers(a, b) {
+
+// function isEven(number) {
 //     debugger;
-// if (a > b) {
-//     return a;
-// } else {
-//     return b
-// }
-// }
+//     return (number % 2) === 0;}
+  
+// isEven(4)
 
-// const res = getBigOfTwoNumbers(4, 5);
-// console.log(res);
+function isEven(number) {
+if (number%2 === 0) {
+    console.log(true)}
+else {console.log(false)}
+};
 
-const num = 5;
-
-function fn(){
-    // const num = 10;
-    debugger;
-    console.log(num);
-}
-fn()
+isEven(5);
