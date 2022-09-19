@@ -1,14 +1,16 @@
-function hello() {
-    console.log('Hello, user');
+function getSumOfTwo(a, b) {
+    debugger;
+    let result = a + b;
+    return result;
 }
 
-hello();
+const res = getSumOfTwo(2, 3);
+console.log(res);
 
-const hello2 = function () {
-    console.log('Hello');
-    
-}
 
-const arrf = () => {
-    
-}
+// function getMultipliceOfTwo(a, b) {
+//     return a * b;
+// }
+
+// const res2 = getMultipliceOfTwo(2, 3);
+// console.log(res2);
