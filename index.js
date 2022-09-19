@@ -12,3 +12,11 @@ console.log(!a);
 // true
 // false && false;
 // false
+// 1 && 1;
+// 1
+// 1 && 0
+// 0
+// 1 && true && 'test'
+// 'test'
+// 1 && false && 'test'
+// false
