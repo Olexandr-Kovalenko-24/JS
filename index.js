@@ -1,7 +1,14 @@
-alert('Hello!');
+// if (4%2 === 0) {
+// console.log('Парне')
+// }
+// else {
+//     console.log('Непарне')
+// }
 
-const res = confirm('Are you ok?');
-console.log(res);
-
-const uservalue = prompt('How old are you?');
-console.log(uservalue);
+const age = Number(prompt('How old are you?'));
+if (age>=18) {
+    console.log('Повнолітній')
+    }
+    else {
+        console.log('Неповнолітній')
+    }
