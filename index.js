@@ -11,10 +11,10 @@
 
 
 
-function isEven(number) {
-    console.log(number % 2 === 0)}
+// function isEven(number) {
+//     console.log(number % 2 === 0)}
   
-isEven(5)
+// isEven(5)
 
 // function isEven(number) {
 // if (number%2 === 0) {
@@ -23,3 +23,14 @@ isEven(5)
 // };
 
 // isEven(5);
+
+function isEven() {
+let number = prompt('Write the number');
+calculate (number);
+}
+
+function calculate(num) {
+console.log(num%2 === 0);
+}
+
+isEven()
