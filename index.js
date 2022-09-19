@@ -14,15 +14,23 @@
 // console.log(res2);
 
 
-function getBigOfTwoNumbers(a, b) {
-    debugger;
-if (a > b) {
-    return a;
-}
-else {
-    return b
-}
-}
+// function getBigOfTwoNumbers(a, b) {
+//     debugger;
+// if (a > b) {
+//     return a;
+// } else {
+//     return b
+// }
+// }
 
-const res = getBigOfTwoNumbers(4, 5);
-console.log(res);
+// const res = getBigOfTwoNumbers(4, 5);
+// console.log(res);
+
+const num = 5;
+
+function fn(){
+    // const num = 10;
+    debugger;
+    console.log(num);
+}
+fn()
