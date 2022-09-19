@@ -1,14 +1,14 @@
-// if (4%2 === 0) {
-// console.log('Парне')
-// }
-// else {
-//     console.log('Непарне')
-// }
+function hello() {
+    console.log('Hello, user');
+}
 
-const age = Number(prompt('How old are you?'));
-if (age>=18) {
-    console.log('Повнолітній')
-    }
-    else {
-        console.log('Неповнолітній')
-    }
+hello();
+
+const hello2 = function () {
+    console.log('Hello');
+    
+}
+
+const arrf = () => {
+    
+}
