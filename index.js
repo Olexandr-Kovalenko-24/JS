@@ -11,16 +11,15 @@
 
 
 
-// function isEven(number) {
-//     debugger;
-//     return (number % 2) === 0;}
-  
-// isEven(4)
-
 function isEven(number) {
-if (number%2 === 0) {
-    console.log(true)}
-else {console.log(false)}
-};
+    console.log(number % 2 === 0)}
+  
+isEven(5)
 
-isEven(5);
+// function isEven(number) {
+// if (number%2 === 0) {
+//     console.log(true)}
+// else {console.log(false)}
+// };
+
+// isEven(5);
