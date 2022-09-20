@@ -12,19 +12,37 @@ const one = Number(prompt('write number'));
 const two = Number(prompt('write number2'));
 const operator = prompt('write operator');
 
-function calculator() {
+console.log(calculator(one, two, operator));
+
+function mul(a, b) {
+    return a * b;
+};
+
+function div(a, b) {
+    return a / b;
+};
+
+function min(a, b) {
+    return a - b;
+};
+
+function sum(a, b) {
+    return a + b;
+};
+
+
+function calculator(firstNum, secNum, oper) {
     switch (operator) {
         case '*':
-            return one * two;
+            return mul(firstNum, secNum, oper);
         case '/':
-            return one / two;
+            return div(firstNum, secNum, oper);
         case '-':
-            return one - two;
+            return min(firstNum, secNum, oper);
         case '+':
-            return one + two;
+            return sum(firstNum, secNum, oper);
         default:
             return 'Unknown value typed';
     }
 }
 
-console.log(calculator());
