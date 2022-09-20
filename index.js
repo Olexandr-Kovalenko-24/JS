@@ -8,9 +8,9 @@
 
 // supperFun(5, square);
 
-const one = Number(prompt('write number'));
-const two = Number(prompt('write number2'));
-const operator = prompt('write operator');
+let one = Number(prompt('write number'));
+let two = Number(prompt('write number2'));
+let operator = prompt('write operator');
 
 console.log(calculator(one, two, operator));
 
