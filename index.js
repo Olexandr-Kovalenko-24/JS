@@ -25,7 +25,9 @@ switch (operator){
  break;
  case '+':
     return one + two;
- default: 'not'
+break;
+ default: 
+return 'Unknown value typed';
 }
 }
 
