@@ -12,23 +12,19 @@ const one = Number(prompt('write number'));
 const two = Number(prompt('write number2'));
 const operator = prompt('write operator');
 
-function calculator () {
-switch (operator){
- case '*':
-    return one * two;
- break;
- case '/':
-    return one / two;
- break;
- case '-':
-    return one - two;
- break;
- case '+':
-    return one + two;
-break;
- default: 
-return 'Unknown value typed';
-}
+function calculator() {
+    switch (operator) {
+        case '*':
+            return one * two;
+        case '/':
+            return one / two;
+        case '-':
+            return one - two;
+        case '+':
+            return one + two;
+        default:
+            return 'Unknown value typed';
+    }
 }
 
-console.log(calculator ());
+console.log(calculator());
