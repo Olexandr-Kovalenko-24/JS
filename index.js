@@ -1,4 +1,18 @@
-// let result = (2+2 === 4) ? '4' : 'no 4';
-// console.log(result);
+const userDrink = prompt('Choose drink: \n1 - tea \n2 - coffe \n3 - juice');
 
-console.log((prompt('How old are you')>18) ? 'Повнолітній' : 'Не повнолітній');
+switch (userDrink) {
+    case '1':
+        console.log('tea');
+    case '2':
+        console.log('coffe');
+    case '3':
+        console.log('juice');
+    case '4':
+        console.log('watter');
+    case '5':
+        console.log('lemonad');
+    default:
+        console.log('Don`t no that drink');
+}
+
+
