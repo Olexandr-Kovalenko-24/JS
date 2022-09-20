@@ -1,36 +1,5 @@
-// function getValueFromUser () {
-// let userName = prompt('Your name is');
-// sayHello (userName);
-// }
+// let result = (2+2 === 4) ? '4' : 'no 4';
+// console.log(result);
 
-// function sayHello (name) {
-//     console.log('Hello ' + name);
-// }
-
-// getValueFromUser();
-
-
-
-// function isEven(number) {
-//     console.log(number % 2 === 0)}
-  
-// isEven(5)
-
-// function isEven(number) {
-// if (number%2 === 0) {
-//     console.log(true)}
-// else {console.log(false)}
-// };
-
-// isEven(5);
-
-function isEven() {
-let number = prompt('Write the number');
-console.log(number%2 === 0);
-}
-
-// function calculate(num) {
-// console.log(num%2 === 0);
-// }
-
-isEven()
+let res = (prompt('How old are you')>18) ? 'Повнолітній' : 'Не повнолітній';
+console.log(res);
