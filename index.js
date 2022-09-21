@@ -80,18 +80,21 @@
 
 
 
-// function fizzBuzz(number){
-// for (let i = 1; i < number; i++) {
-//     if (!(i % 3)){console.log('fizz')}
-//     else if (!(i % 5)){console.log('buzz')}
-//     else if (!(i % 3) && !(i % 5)){console.log('fizz buzz')}
-//     else {
-//     console.log(i)};
+
+
+// function divide(number) {
+//     for (let i = 1; i <= number; i++) {
+//         if (number % i === 0) {console.log(i)}
 // }
 // }
 
-function divide(number) {
-    for (let i = 1; i <= number; i++) {
-        if (number % i === 0) {console.log(i)}
-}
-}
+
+const userPass = 'Good password';
+let password = '';
+
+do {
+    // debugger;
+    password = prompt('Your password is?');
+    if (password !== userPass) {}
+    else {console.log('Right password')}
+} while (password !== userPass)
