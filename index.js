@@ -48,9 +48,50 @@
 
 
 
-for (let i = 0; i < 10; i++) {
-    console.log (i);
+// for (let i = 0; i < 10; i++) {
+//     console.log (i);
+// }
+
+// function factorial(number){
+//     let res = 1;
+//     for (let i = 1; i <= number; i++) {
+//         res = res * 1;
+//     }
+//     return res;
+// }
+
+// function pow(base, power){
+//     let res = base;
+//     for (let i = 1; i < power; i++) {
+//         res *= base;
+//     }
+//     return res;
+// }
+
+
+
+// function square(h, w) {
+//     return h*w;
+// }
+
+// function length(diam) {
+//     return diam*Math.PI;
+// }
+
+
+
+// function fizzBuzz(number){
+// for (let i = 1; i < number; i++) {
+//     if (!(i % 3)){console.log('fizz')}
+//     else if (!(i % 5)){console.log('buzz')}
+//     else if (!(i % 3) && !(i % 5)){console.log('fizz buzz')}
+//     else {
+//     console.log(i)};
+// }
+// }
+
+function divide(number) {
+    for (let i = 1; i <= number; i++) {
+        if (number % i === 0) {console.log(i)}
 }
-
-
-
+}
