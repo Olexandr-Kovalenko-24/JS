@@ -93,8 +93,13 @@ const userPass = 'Good password';
 let password = '';
 
 do {
-    // debugger;
-    password = prompt('Your password is?');
-    if (password !== userPass) {}
-    else {console.log('Right password')}
-} while (password !== userPass)
+    password = prompt('Your password is?')
+} while(password !== userPass)
+console.log('Right password');
+
+
+// do {
+//     password = prompt('Your password is?');
+//     if (password !== userPass) {}
+//     else {console.log('Right password')}
+// } while (password !== userPass)
