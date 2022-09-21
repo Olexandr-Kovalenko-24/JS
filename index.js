@@ -27,10 +27,30 @@
 // }
 
 
-let n = 0;
-while (n++ < 10) {
-    if (n === 3) {
-        continue;
-    }
-    console.log(n);
+// let n = 0;
+// while (n++ < 10) {
+//     if (n === 3) {
+//         continue;
+//     }
+//     console.log(n);
+// }
+
+// let k = 0;
+// let sum = 0;
+// while (k++ < 5) {
+//     if (k % 2) {
+//         continue;
+//     }
+//     sum += k;
+// }
+// console.log(sum);
+
+
+
+
+for (let i = 0; i < 10; i++) {
+    console.log (i);
 }
+
+
+
