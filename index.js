@@ -13,17 +13,24 @@
 // const password = 'Good password';
 // let UserValue = '';
 
-
-
 // do {
 //     let UserValue = prompt('Write password');
 // } while (UserValue !== password);
 // console.log('Good password');
 
 
-let n = 1;
+// let n = 1;
+// while (n++ < 10) {
+//     if (n % 2 === 0) {
+//         console.log(n);
+//     }
+// }
+
+
+let n = 0;
 while (n++ < 10) {
-    if (n % 2 === 0) {
-        console.log(n);
+    if (n === 3) {
+        continue;
     }
+    console.log(n);
 }
