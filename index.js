@@ -89,13 +89,13 @@
 // }
 
 
-const userPass = 'Good password';
-let password = '';
+// const userPass = 'Good password';
+// let password = '';
 
-do {
-    password = prompt('Your password is?')
-} while(password !== userPass)
-console.log('Right password');
+// do {
+//     password = prompt('Your password is?')
+// } while(password !== userPass)
+// console.log('Right password');
 
 
 // do {
@@ -103,3 +103,11 @@ console.log('Right password');
 //     if (password !== userPass) {}
 //     else {console.log('Right password')}
 // } while (password !== userPass)
+
+
+let i = 0;
+while(i<10) {
+    ++i;
+    if (!(i%2)){console.log(i)
+}
+}
