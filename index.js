@@ -136,10 +136,21 @@
 // }
 
 
-function pow(number, power) {
-    let res = 1;
-    for(let i = 1; i <= power; i++){
-        res = number**i;
+// function pow(number, power) {
+//     debugger;
+//     let res = 1;
+//     for(let i = 1; i <= power; i++){
+//         res = res*number;
+//     }
+//     console.log(res)
+// }
+
+
+function fizzBuzz(number){
+    for (i=1; i<=number; i++){
+        if (!(i%3) && !(i%5)){console.log('fizz buzz')}
+        else if (!(i%3)){console.log('fizz')}
+        else if (!(i%5)){console.log('buzz')}
+        else {console.log(i)}
     }
-    console.log(res)
 }
