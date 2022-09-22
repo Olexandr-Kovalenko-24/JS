@@ -30,19 +30,39 @@
 // console.log(res);
 
 
-let obj1 = {
-    a: 1,
+// let obj1 = {
+//     a: 1,
+//     b: 2,
+//     c: 5,
+// };
+// let obj2 = {
+
+// };
+
+// function isEmpty(obj) {
+//     for (const key in obj) {
+//         if (key) {
+//         } return false
+//     }
+//     return true
+// }
+
+const obj3 = {
+    a: '1',
     b: 2,
-    c: 5,
 };
-let obj2 = {
-
+const obj4 = {
+    a: '1',
+    b: 2,
+};
+const obj5 = {
+    a: '2',
+    b: 2,
 };
 
-function isEmpty(obj) {
-    for (const key in obj) {
-        if (key) {
-        } return false
+function isEqual(obj1, obj2) {
+    for (const key in obj1 && obj2){
+        if (obj1[key] === obj2[key]) 
+        {return true} return false
     }
-    return true
 }
