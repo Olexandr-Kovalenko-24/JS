@@ -12,15 +12,41 @@ let cat = {
     }
 };
 
-let windowBeside = {
-    color: 'white',
-    price: 'a lot of',
-    width: 1200,
-    height: 1200,
+let catGirl = {
+    breed: "Blue Cheshire",
+    name: 'Jes',
+    age: 3,
+    weight: 8,
+    color: 'black',
+    sleep: function () {
+        console.log('I am sleeping')
+    },
+    eat: function () {
+        console.log('I am eating')
+    }
+};
+
+cat.girlfriend = catGirl;
+
+
+let windMy = {
+    color: "White",
     open: function () {
-        console.log('Open window')
+        console.log('open window')
     },
-    close: function () {
-        console.log('Close window')
-    },
+    weight: 15,
 }
+let glass = {
+    color: "Opaque",
+    weight: 7,
+    width: 1000,
+    300: 'Sparta',
+}
+windMy.glass = glass;
+
+
+let variable = 'color';
+let num = 2;
+
+cat[num];
+cat[variable];
