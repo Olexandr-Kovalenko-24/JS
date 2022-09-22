@@ -12,15 +12,37 @@
 // }
 
 
-let obj = {
+// let obj = {
+//     a: 1,
+//     b: 2,
+//     c: 5,
+//     d: 7,
+//     e: 9,
+//     f: 'hey',
+// }
+
+// let res = 0;
+// for (let key in obj) {
+//     if(typeof obj[key] === 'number'){
+//     res += obj[key]
+//     }
+// }
+// console.log(res);
+
+
+let obj1 = {
     a: 1,
     b: 2,
     c: 5,
-    d: 7,
-    e: 9,
-}
-let res = 0;
-for (let key in obj) {
-    res += obj[key]
-    console.log(res)
+};
+let obj2 = {
+
+};
+
+function isEmpty(obj) {
+    for (const key in obj) {
+        if (key) {
+        } return false
+    }
+    return true
 }
