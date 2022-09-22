@@ -50,3 +50,37 @@ let num = 2;
 
 cat[num];
 cat[variable];
+
+
+
+
+const weekPlan = {
+    Mon: 'dantist',
+    Tue: 'go to park',
+    Wed: 'meet friends',
+    Thu: 'learn',
+    Fri: 'hard work',
+    Sat: 'go to party'
+}
+
+let day = prompt('Write the day of week')
+switch (day){
+    case 'Mon':
+        alert('dantist');
+        break;
+    case 'Tue':
+        alert('go to park');
+        break;
+    case 'Wed':
+        alert('meet friends');
+        break;
+    case 'Thu':
+        alert('learn');
+        break;
+    case 'Fri':
+        alert('hard work');
+        break;
+    case 'Sat':
+        alert('go to party');
+        break;
+}
