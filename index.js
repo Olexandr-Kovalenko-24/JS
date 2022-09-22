@@ -66,21 +66,21 @@ const weekPlan = {
 let day = prompt('Write the day of week')
 switch (day){
     case 'Mon':
-        alert('dantist');
+        alert(weekPlan.Mon);
         break;
     case 'Tue':
-        alert('go to park');
+        alert(weekPlan[Tue]);
         break;
     case 'Wed':
-        alert('meet friends');
+        alert(weekPlan.Wed);
         break;
     case 'Thu':
-        alert('learn');
+        alert(weekPlan.Thu);
         break;
     case 'Fri':
-        alert('hard work');
+        alert(weekPlan.Fri);
         break;
     case 'Sat':
-        alert('go to party');
+        alert(weekPlan.Sat);
         break;
 }
