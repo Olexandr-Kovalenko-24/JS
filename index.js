@@ -111,8 +111,28 @@
 // }
 // }
 
-let i = 0;
-while(i++<10) {
-    if (i%3){console.log(i)
+// let i = 0;
+// while(i++<10) {
+//     if (i%3){console.log(i)
+// }
+// }
+
+// let i = 0;
+// while(i++<10) {
+//     if (i === 3){
+//         continue;
+// }
+// console.log(i);
+// }
+
+
+
+function factorial(number){
+    let res = 1;
+    for(let i = 1; i <= number; i++){
+        res *= i;
+    }
+    console.log(res)
 }
-}
+
+
