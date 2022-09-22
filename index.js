@@ -7,3 +7,5 @@ let obj = {
         console.log('I am method')
     }
 }
+
+let newObj = obj;
