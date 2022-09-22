@@ -127,12 +127,19 @@
 
 
 
-function factorial(number){
+// function factorial(number){
+//     let res = 1;
+//     for(let i = 1; i <= number; i++){
+//         res *= i;
+//     }
+//     console.log(res)
+// }
+
+
+function pow(number, power) {
     let res = 1;
-    for(let i = 1; i <= number; i++){
-        res *= i;
+    for(let i = 1; i <= power; i++){
+        res = number**i;
     }
     console.log(res)
 }
-
-
