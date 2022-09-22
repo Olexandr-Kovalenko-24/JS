@@ -63,24 +63,9 @@ const weekPlan = {
     Sat: 'go to party'
 }
 
-let day = prompt('Write the day of week')
-switch (day){
-    case 'Mon':
-        alert(weekPlan.Mon);
-        break;
-    case 'Tue':
-        alert(weekPlan[Tue]);
-        break;
-    case 'Wed':
-        alert(weekPlan.Wed);
-        break;
-    case 'Thu':
-        alert(weekPlan.Thu);
-        break;
-    case 'Fri':
-        alert(weekPlan.Fri);
-        break;
-    case 'Sat':
-        alert(weekPlan.Sat);
-        break;
+function getWeekPlan (plan) {
+    const userValue = prompt('Write the day of week');
+    alert(plan [userValue])
 }
+
+getWeekPlan(weekPlan);
