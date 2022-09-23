@@ -47,18 +47,29 @@
 //     return true
 // }
 
-// const obj3 = {
-//     a: '1',
-//     b: 2,
-// };
-// const obj4 = {
-//     a: '2',
-//     b: 2,
-// };
-// const obj5 = {
-//     a: '2',
-//     b: 2,
-// };
+const obj3 = {
+    a: '1',
+    b: 2,
+};
+const obj4 = {
+    a: '2',
+    b: 2,
+};
+const obj5 = {
+    a: '2',
+    // b: 2,
+};
+
+function isEqual (obj1, obj2) {
+    for (const key in obj1){
+        if (obj1[key] !== obj2[key]) 
+        {return false} 
+    }
+    for (const key in obj2){
+        if (obj1[key] !== obj2[key]) 
+        {return false} 
+}
+}
 
 // function isEqual(obj1, obj2) {
 //     for (const key in obj1 && obj2){
@@ -66,6 +77,8 @@
 //         {return true} return false
 //     }
 // }
+
+
 
 // const weekPlan = {
 //     Mon: 'dantist',
@@ -85,18 +98,18 @@
 
 
 
-let obj1 = {
-    a: 1,
-    b: 2,
-    c: 5,
-};
-let obj2 = {
+// let obj1 = {
+//     a: 1,
+//     b: 2,
+//     c: 5,
+// };
+// let obj2 = {
 
-};
+// };
 
-function isEmpty (object){
-    for (let key in object) {
-        if (key) {return false}
-    }
-    return true
-}
+// function isEmpty (object){
+//     for (let key in object) {
+//         if (key) {return false}
+//     }
+//     return true
+// }
