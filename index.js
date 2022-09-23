@@ -67,18 +67,37 @@
 //     }
 // }
 
-const weekPlan = {
-    Mon: 'dantist',
-    Tue: 'go to park',
-    Wed: 'meet friends',
-    Thu: 'learn',
-    Fri: 'hard work',
-    Sat: 'go to party'
+// const weekPlan = {
+//     Mon: 'dantist',
+//     Tue: 'go to park',
+//     Wed: 'meet friends',
+//     Thu: 'learn',
+//     Fri: 'hard work',
+//     Sat: 'go to party'
+// };
+
+// function planOfDay(somePlannList) {
+//     const userValue = prompt('Write the day of week');
+//     alert(somePlannList [userValue]);
+// };
+
+// planOfDay(weekPlan)
+
+
+
+let obj1 = {
+    a: 1,
+    b: 2,
+    c: 5,
+};
+let obj2 = {
+
 };
 
-function planOfDay(somePlannList) {
-    const userValue = prompt('Write the day of week');
-    alert(somePlannList [userValue]);
-};
-
-planOfDay(weekPlan)
+function isEmpty (object){
+    for (let key in object) {
+        if (key) {return false}
+        else {}
+    }
+    return true
+}
