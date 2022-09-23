@@ -32,29 +32,31 @@ const us2 = new User('Jack', 'Sparrow', 30);
 
 
 
-function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed, currentSpeed) {
+function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed) {
     this.brand = brand;
     this.model = model;
     this.capasityOfEngine = capasityOfEngine;
     this.numberOfSeats = numberOfSeats;
     this.topSpeed = topSpeed;
-    this.currentSpeed = currentSpeed;
+    this.currentSpeed = 0;
     this.run = function () {
-        console.log(this.model + ' rides')
+        console.log(this.model + ' rides ' + this.currentSpeed + ' km/h')
     };
     this.stop = function () {
-        console.log(this.model + ' stop')
+        console.log(this.model + ' is stopped')
     };
     this.accelerate = function (value) {
-        let acc = this.currentSpeed + value;
-        if (acc >= this.topSpeed) {console.log(this.topSpeed)}
-        else {console.log(acc)}
+        this.currentSpeed += value;
+        if (this.currentSpeed > this.topSpeed) {this.currentSpeed = this.topSpeed;
+            }
+            console.log(this.currentSpeed)
     };
     this.deaccelerate = function (value) {
-        let acc = this.currentSpeed - value;
-        if (acc > 0) {console.log(acc)}
+        this.currentSpeed -= value;
+        if (this.currentSpeed > 0) {console.log(this.currentSpeed)}
         else {console.log(this.stop())}
     };
 }
 
-const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300, 100);
+const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
+
