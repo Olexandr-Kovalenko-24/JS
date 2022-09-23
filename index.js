@@ -62,23 +62,45 @@
 
 
 
-function User(name, lastName, age, email) {
+// function User(name, lastName, age, email) {
+//     this.name = name;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.email = email;
+//     this.password = 123;
+//     this.isLogin = false;
+//     this.getFullName = function () {
+//         console.log(this.name + ' ' + this.lastName)
+//     };
+//     this.signIn = function () {
+//         let pass = Number(prompt('Write your password'));
+//         if (this.password === pass) {
+//             this.isLogin = true;
+//             return 'you are logIn'
+//         } else {return 'password incorect'}
+//     }
+// };
+
+// const alex = new User ('Alex', 'Kovalenko', 24, '22.gmailcom')
+
+
+
+function Worker (name, lastName, rate, days){
     this.name = name;
     this.lastName = lastName;
-    this.age = age;
-    this.email = email;
-    this.password = 123;
-    this.isLogin = false;
-    this.getFullName = function () {
-        console.log(this.name + ' ' + this.lastName)
+    if(rate < 0) {
+        this.rate = 0;
+    } else {
+        this.rate = rate;
     };
-    this.signIn = function () {
-        let pass = Number(prompt('Write your password'));
-        if (this.password === pass) {
-            this.isLogin = true;
-            return 'you are logIn'
-        } else {return 'password incorect'}
+    if(days > 31) {
+        this.days = 31;
+    } else {
+        this.days = this.days;
+    };
+    this.getSalary = function(){
+        return this.rate*this.days
     }
-};
+}
 
-const alex = new User ('Alex', 'Kovalenko', 24, '22.gmailcom')
+const petro = new Worker('Petro', 'Roshenko', 200, 4)
