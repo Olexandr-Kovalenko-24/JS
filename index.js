@@ -97,7 +97,6 @@ let obj2 = {
 function isEmpty (object){
     for (let key in object) {
         if (key) {return false}
-        else {}
     }
     return true
 }
