@@ -47,22 +47,38 @@
 //     return true
 // }
 
-const obj3 = {
-    a: '1',
-    b: 2,
-};
-const obj4 = {
-    a: '1',
-    b: 2,
-};
-const obj5 = {
-    a: '2',
-    b: 2,
+// const obj3 = {
+//     a: '1',
+//     b: 2,
+// };
+// const obj4 = {
+//     a: '2',
+//     b: 2,
+// };
+// const obj5 = {
+//     a: '2',
+//     b: 2,
+// };
+
+// function isEqual(obj1, obj2) {
+//     for (const key in obj1 && obj2){
+//         if (obj1[key] === obj2[key]) 
+//         {return true} return false
+//     }
+// }
+
+const weekPlan = {
+    Mon: 'dantist',
+    Tue: 'go to park',
+    Wed: 'meet friends',
+    Thu: 'learn',
+    Fri: 'hard work',
+    Sat: 'go to party'
 };
 
-function isEqual(obj1, obj2) {
-    for (const key in obj1 && obj2){
-        if (obj1[key] === obj2[key]) 
-        {return true} return false
-    }
-}
+function planOfDay(somePlannList) {
+    const userValue = prompt('Write the day of week');
+    alert(somePlannList [userValue]);
+};
+
+planOfDay(weekPlan)
