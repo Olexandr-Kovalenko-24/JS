@@ -32,32 +32,34 @@
 
 
 
-// function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed) {
-//     this.brand = brand;
-//     this.model = model;
-//     this.capasityOfEngine = capasityOfEngine;
-//     this.numberOfSeats = numberOfSeats;
-//     this.topSpeed = topSpeed;
-//     this.currentSpeed = 0;
-//     this.run = function () {
-//         console.log(this.model + ' rides ' + this.currentSpeed + ' km/h')
-//     };
-//     this.stop = function () {
-//         console.log(this.model + ' is stopped')
-//     };
-//     this.accelerate = function (value) {
-//         this.currentSpeed += value;
-//         if (this.currentSpeed > this.topSpeed) {this.currentSpeed = this.topSpeed}
-//             return this.run()
-//     };
-//     this.deaccelerate = function (value) {
-//         this.currentSpeed -= value;
-//         if (this.currentSpeed > 0) {console.log(this.currentSpeed)}
-//         else {console.log(this.stop())}
-//     };
-// }
+function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed) {
+    this.brand = brand;
+    this.model = model;
+    this.capasityOfEngine = capasityOfEngine;
+    this.numberOfSeats = numberOfSeats;
+    this.topSpeed = topSpeed;
+    this.currentSpeed = 0;
+    this.run = function () {
+        // console.log(this.model + ' rides ' + this.currentSpeed + ' km/h')
+        return `${this.model} rides ${this.currentSpeed} km/h`
+    };
+    this.stop = function () {
+        // console.log(this.model + ' is stopped')
+        return `${this.model} is stopped`
+    };
+    this.accelerate = function (value) {
+        this.currentSpeed += value;
+        if (this.currentSpeed > this.topSpeed) {this.currentSpeed = this.topSpeed}
+            return this.run()
+    };
+    this.deaccelerate = function (value) {
+        this.currentSpeed -= value;
+        if (this.currentSpeed > 0) {console.log(this.currentSpeed)}
+        else {console.log(this.stop())}
+    };
+}
 
-// const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
+const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
 
 
 
@@ -114,3 +116,24 @@ ${4+4}
 =4`
 
 console.log(templateString);
+
+
+const protocol = 'http';
+const domain = 'www.example.com';
+const port = 80;
+const path = '/path/file.html';
+
+const query = {
+    key1: 'value1',
+    key2: 'value2',
+    key3: 'value3',
+}
+
+function createURL(protocol, domain, port, path, queryParams) {
+    let url = `${protocol}://${domain}:${port}/${path}?`;
+    for (const key in queryParams) {
+        url += `${key}=${queryParams[key]}&`;
+    }
+    return url;
+}
+
