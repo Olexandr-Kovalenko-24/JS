@@ -47,9 +47,8 @@ function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed) {
     };
     this.accelerate = function (value) {
         this.currentSpeed += value;
-        if (this.currentSpeed > this.topSpeed) {this.currentSpeed = this.topSpeed;
-            }
-            console.log(this.currentSpeed)
+        if (this.currentSpeed > this.topSpeed) {this.currentSpeed = this.topSpeed}
+            return this.run()
     };
     this.deaccelerate = function (value) {
         this.currentSpeed -= value;
