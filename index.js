@@ -57,4 +57,4 @@ function Car(brand, model, capasityOfEngine, numberOfSeats, topSpeed, currentSpe
     };
 }
 
-const car1 = new Car('lexus', 'supper', 2000, 5, 300, 100);
+const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300, 100);
