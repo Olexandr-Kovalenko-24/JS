@@ -85,22 +85,32 @@
 
 
 
-function Worker (name, lastName, rate, days){
-    this.name = name;
-    this.lastName = lastName;
-    if(rate < 0) {
-        this.rate = 0;
-    } else {
-        this.rate = rate;
-    };
-    if(days > 31) {
-        this.days = 31;
-    } else {
-        this.days = this.days;
-    };
-    this.getSalary = function(){
-        return this.rate*this.days
-    }
-}
+// function Worker (name, lastName, rate, days){
+//     this.name = name;
+//     this.lastName = lastName;
+//     if(rate < 0) {
+//         this.rate = 0;
+//     } else {
+//         this.rate = rate;
+//     };
+//     if(days > 31) {
+//         this.days = 31;
+//     } else {
+//         this.days = this.days;
+//     };
+//     this.getSalary = function(){
+//         return this.rate*this.days
+//     }
+// }
 
-const petro = new Worker('Petro', 'Roshenko', 200, 4)
+// const petro = new Worker('Petro', 'Roshenko', 200, 4)
+
+
+
+
+
+const templateString = `2+2
+${4+4}
+=4`
+
+console.log(templateString);
