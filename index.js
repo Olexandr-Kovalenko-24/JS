@@ -64,18 +64,17 @@ const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
 
 
 
-// function User(name, lastName, age, email) {
+// function User(name, lastName, age, email, password) {
 //     this.name = name;
 //     this.lastName = lastName;
 //     this.age = age;
 //     this.email = email;
-//     this.password = 123;
+//     this.password = password;
 //     this.isLogin = false;
 //     this.getFullName = function () {
 //         console.log(this.name + ' ' + this.lastName)
 //     };
-//     this.signIn = function () {
-//         let pass = Number(prompt('Write your password'));
+//     this.signIn = function (pass) {
 //         if (this.password === pass) {
 //             this.isLogin = true;
 //             return 'you are logIn'
@@ -83,7 +82,7 @@ const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
 //     }
 // };
 
-// const alex = new User ('Alex', 'Kovalenko', 24, '22.gmailcom')
+// const alex = new User ('Alex', 'Kovalenko', 24, '22.gmailcom', '123')
 
 
 
