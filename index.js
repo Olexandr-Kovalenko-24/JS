@@ -111,11 +111,11 @@ const lexusLX500 = new Car('lexus', 'LX 500', 2000, 5, 300);
 
 
 
-const templateString = `2+2
-${4+4}
-=4`
+// const templateString = `2+2
+// ${4+4}
+// =4`
 
-console.log(templateString);
+// console.log(templateString);
 
 
 const protocol = 'http';
