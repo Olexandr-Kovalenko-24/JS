@@ -48,6 +48,4 @@ arr6.splice(1, 1, 'w');
 arr6.splice(1, 0, 'tr');
 arr6.splice(5, 0, 'vvv');
 
-const arr7 = ['a', 'b', 'c', 'd']
-arr7.reverse();
-arr7.join('')
+const arr7 = ['a', 'b', 'c', 'd'].reverse().join('');
