@@ -3,6 +3,13 @@
 function MyArray () {
     this.length = 0;
 
+}
+
+MyArray.prototype = new MyArrayMethods;
+// const protoArrayObject = new MyArrayMethods();
+
+function MyArrayMethods (){
+
     this.push = function(){
         for (let i = 0; i < arguments.length; i++){
             this[this.length] = arguments[i];
@@ -29,6 +36,3 @@ function MyArray () {
     }
 }
 
-// function someFunction (currentValue, index, array){
-//     console.log(currentValue);
-// }
