@@ -17,11 +17,10 @@ function MyArray () {
         for(let i = 0; i < this.length; i++){
         callbackFunction(this[i], i, this);
     }}
-
     this.map = function(callbackFunction){
         const arr = new MyArray();
         for(let i = 0; i < this.length; i++){
-        arr.push(callbackFunction(this[i], i, this));
+        arr.push(callbackFunction(this[i]));
         };
         return arr;
     }
