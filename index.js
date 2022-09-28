@@ -56,6 +56,7 @@ const mail = arrUsers
 }).map(function (user) {
     return user.mail
 })
+// console.table(mail);
 
 const fullNameOfUkrainian = arrUsers
 .filter(function(user){
@@ -66,6 +67,8 @@ const fullNameOfUkrainian = arrUsers
 // console.table(fullNameOfUkrainian);
 
 arrUsers.forEach (function(user){
-    return user.isSubscribe = true;
+    if(user.age >= 18){
+        user.isSubscribe = true;
+    }
 })
 console.table(arrUsers);
