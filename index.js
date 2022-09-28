@@ -1,32 +1,23 @@
 'use strict'
 
-// function sumOfAllArg(){
-//     let sum = 0;
-//     for (let i = 0; i < arguments.length; i++){
-//         sum += arguments[i]
-//     }
-//     return sum;
-// }
-
-function Ladder () {
-    this.currentStep = 0;
+function User(firstName, lastName, age, mail, isSubscribe = false) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.mail = mail;
+    this.isSubscribe = isSubscribe;
 }
 
-function LadderMethods () {
-    this.up = function(){
-        ++this.currentStep
-    return this;
-    }
-    this.down = function(){
-        --this.currentStep
-    return this;
-    }
-    this.showStep = function(){
-        return this.currentStep;
-    }
+function getRandomArbitrary(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
 }
 
-const protoObj = new LadderMethods;
-Ladder.prototype = protoObj;
-// Ladder.prototype = new LadderMethods;
-// lad1.up().down().down().up().up().showStep(); //1
+function createArrayOfUsers(quantity) {
+    const userArr = []
+    for (let i = 0; i <= quantity; i++) {
+        let us = new User(`Name ${i}`, `LastName ${i}`, getRandomArbitrary(1, 100),
+            `mail${1}.com`, Boolean(Math.round(Math.random())))
+        userArr.push(us);
+    }
+    return userArr;
+}
