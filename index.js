@@ -21,3 +21,12 @@ function createArrayOfUsers(quantity) {
     }
     return userArr;
 }
+
+const arrUsers = createArrayOfUsers(50);
+console.table(arrUsers);
+
+
+const fNameArray = arrUsers.map(function(userObj){
+    return `${userObj.firstName} ${userObj.lastName}`;
+});
+
