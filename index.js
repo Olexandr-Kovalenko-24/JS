@@ -23,10 +23,19 @@ function createArrayOfUsers(quantity) {
 }
 
 const arrUsers = createArrayOfUsers(50);
-console.table(arrUsers);
+
 
 
 const fNameArray = arrUsers.map(function(userObj){
     return `${userObj.firstName} ${userObj.lastName}`;
 });
 
+arrUsers.sort(function(usA, usB){
+return usA.age - usB.age
+})
+
+console.table(arrUsers);
+
+const filtered = arrUsers.filter(function (elem) {
+    return elem.age > 20
+})
