@@ -7,3 +7,10 @@ function sum(a, b, ...array){
 }
 
 sum(1,2,35,63,24)
+
+
+const sumOfAllArguments = (...restAr) => 
+restAr.reduce((accumulator, currentValue) => 
+accumulator + currentValue, 0)
+
+console.log(sumOfAllArguments(3,46,24,67))
