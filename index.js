@@ -1,12 +1,7 @@
 'use strict'
-
-function sum(a, b, c){
-    return a+b+c;
+for (let i = 1; i < 10; i++) {
+    for (let j = 1; j < 10; j++) {
+        console.log(`${j} * ${i}  = ${j*i}`);
+    }
+    console.log('-------')
 }
-
-
-const numbers = [1, 2, 3, 75, 23]
-
-console.log(sum(...numbers));
-
-const newArr = [...numbers]
