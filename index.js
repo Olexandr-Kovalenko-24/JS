@@ -26,20 +26,36 @@
 
 
 
-function drawSquare(dimention) {
-    let square = ''
-    for (let i = 0; i <= dimention; i++) {
-        for (let j = 0; j <= dimention; j++) {
-            if(i === 0 || i === dimention
-                || j === 0 || j === dimention){
-                square += '*';
-            } else if (i === j) {
-                square += '*'; 
-            } else {
-                square += ' '
-            }
-        }
-        square += '\n';
-    }
-    console.log(square)
-}
+// function drawSquare(dimention) {
+//     let square = ''
+//     for (let i = 0; i <= dimention; i++) {
+//         for (let j = 0; j <= dimention; j++) {
+//             if(i === 0 || i === dimention
+//                 || j === 0 || j === dimention
+//                 || i === j){
+//                 square += '*';
+//             } else {
+//                 square += ' '
+//             }
+//         }
+//         square += '\n';
+//     }
+//     console.log(square)
+// }
+
+// function drawSquare(dimention) {
+//     let square = ''
+//     for (let i = 0; i <= dimention; i++) {
+//         for (let j = 0; j <= dimention; j++) {
+//             if(i === 0 || i === dimention
+//                 || j === 0 || j === dimention
+//                 || i === dimention - j){
+//                 square += '*';
+//             } else {
+//                 square += ' '
+//             }
+//         }
+//         square += '\n';
+//     }
+//     console.log(square)
+// }
