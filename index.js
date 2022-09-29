@@ -26,7 +26,7 @@ function createArrayOfUsers(quantity) {
     for (let i = 0; i <= quantity; i++) {
         let us = new User(`Name ${i}`, `LastName ${i}`, getRandomArbitrary(1, 100),
             `mail${1}.com`, Boolean(Math.round(Math.random())),
-            NATIONALITIES[getRandomArbitrary(0,4)])
+            NATIONALITIES[getRandomArbitrary(0, 4)])
         userArr.push(us);
     }
     return userArr;
@@ -36,12 +36,12 @@ const arrUsers = createArrayOfUsers(50);
 
 
 
-const fNameArray = arrUsers.map(function(userObj){
+const fNameArray = arrUsers.map(function (userObj) {
     return `${userObj.firstName} ${userObj.lastName}`;
 });
 
-arrUsers.sort(function(usA, usB){
-return usA.age - usB.age
+arrUsers.sort(function (usA, usB) {
+    return usA.age - usB.age
 })
 
 // console.table(arrUsers);
@@ -51,23 +51,23 @@ const filtered = arrUsers.filter(function (elem) {
 })
 
 const mail = arrUsers
-.filter(function (elem) {
-    return elem.age >= 18 && elem.isSubscribe
-}).map(function (user) {
-    return user.mail
-})
-// console.table(mail);
+    .filter(function (elem) {
+        return elem.age >= 18 && elem.isSubscribe
+    }).map(function (user) {
+        return user.mail
+    })
+
 
 const fullNameOfUkrainian = arrUsers
-.filter(function(user){
-    return (user.nationality === 'Ukraine') && user.isSubscribe
-}).map(function(us){
-    return `${us.firstName} ${us.lastName}`
-})
-// console.table(fullNameOfUkrainian);
+    .filter(function (user) {
+        return (user.nationality === 'Ukraine') && user.isSubscribe
+    }).map(function (us) {
+        return `${us.firstName} ${us.lastName}`
+    })
 
-arrUsers.forEach (function(user){
-    if(user.age >= 18){
+
+arrUsers.forEach(function (user) {
+    if (user.age >= 18) {
         user.isSubscribe = true;
     }
 })
