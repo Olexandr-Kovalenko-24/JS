@@ -60,32 +60,13 @@
 //     console.log(square)
 // }
 
-function divDiap(a, ... b){
+function divDiap(a, ...b) {
     for (let i = a; i <= b; i++) {
-            for (let j = 1; j <= i; j++) {
-                if (number % j === 0) {console.log(j)};
-            }
-            console.log('\n')
+        let res = [];
+        for (let j = 1; j <= i; j++) {
+            if (i % j === 0) { res.push(j) };
         }
+        console.log(`Divides to ${i} -`, res)
+    }
 }
 
-// function divide(number) {
-//     for (let i = 1; i <= number; i++) {
-//         if (number % i === 0) {console.log(i)}
-// }
-// }
-
-
-const obj = {
-    test: 'supervalue',
-    key: 1,
-};
-
-function consoleTest() {
-    console.log(this.test)
-}
-
-const wrapperFunction = consoleTest.bind(obj);
-wrapperFunction();
-
-consoleTest.call(obj);
