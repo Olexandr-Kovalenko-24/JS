@@ -18,3 +18,12 @@ function toUpFirstLater(string){
     .concat(string.slice(1));
 
 }
+
+
+function checkSpam(string){
+    if (string.includes('viagra')
+    || string.includes('XXX')
+    || string.includes('buy'))
+    {return true} else{return false}
+}
+
