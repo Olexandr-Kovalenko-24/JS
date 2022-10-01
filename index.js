@@ -26,14 +26,27 @@ function checkSpam(string) {
         || string.includes('buy')) { return true } else { return false }
 }
 
+function isSpam(str) {
+    const spamWords = ['viagra', 'XXX', 'buy']
+    for (let i = 0; i < spamWords.length; i++) {
+        if (str.toLowerCase().includes(spamWords[i].toLowerCase())) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function truncate(string, maxLength) {
     if (string.length > maxLength) {
         return string.slice(0, maxLength).concat('...')
     } else { return string }
 }
 
+const truncate2 = (string, maxLength) => string.length > maxLength ?
+    string.slice(0, maxLength).concat('...') : string;
 
-function palindrom(string) {
+
+function isPalindrom(string) {
     return string.toLowerCase().split('').reverse().join('')
         === string.toLowerCase()
 }
