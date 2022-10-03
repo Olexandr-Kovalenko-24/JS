@@ -94,3 +94,26 @@ function sum(a,b){
 }
 
 sum(4,5)
+
+/**
+ * 
+ * @param {String} name - Name of person
+ * @returns {undefined}
+ */
+
+function sayHello(name){
+    console.log(`Hello, ${name}`);
+}
+
+// sayHello(Alex);
+
+
+
+function powNum (base, power) {
+    if (power === 1){
+        return base;
+    }
+    return base * powNum(base, power-1) 
+}
+
+const powN = (base, power) => (power === 1) ? base : base * powNum(base, power-1)
