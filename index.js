@@ -32,4 +32,32 @@ function sumOfNumbers(array) {
     return sum;
 }
 
-console.log(sumOfNumbers(arr))
+// console.log(sumOfNumbers(arr))
+
+
+
+
+function fibonacchi(number) {
+    if (number <= 1) {
+        return number;
+    } else {
+        return (fibonacchi(number - 1) + fibonacci(number - 2));
+    }
+}
+
+function fib(n) {
+    return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+}
+
+function fn(n) {
+    if(n === 0){
+        return 0}
+    if (n===2 || n===1){
+        return 1
+    }
+    return fn(n-1)+fn(n-2)
+}
+
+for (let i = 0; i<7; i++){
+    console.log(fn(i))
+}
