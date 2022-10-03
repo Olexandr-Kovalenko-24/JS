@@ -50,15 +50,16 @@ function fib(n) {
 }
 
 function fn(n) {
-    if(n === 0){
-        return 0}
-    if (n===2 || n===1){
+    if (n === 0) {
+        return 0
+    }
+    if (n === 2 || n === 1) {
         return 1
     }
-    return fn(n-1)+fn(n-2)
+    return fn(n - 1) + fn(n - 2)
 }
 
-for (let i = 0; i<7; i++){
+for (let i = 0; i < 7; i++) {
     console.log(fn(i))
 }
 
@@ -89,11 +90,11 @@ for (let i = 0; i<7; i++){
  * @returns {Number} - Sum of two numbers
  */
 
-function sum(a,b){
-    return a+b;
+function sum(a, b) {
+    return a + b;
 }
 
-sum(4,5)
+sum(4, 5)
 
 /**
  * 
@@ -101,7 +102,7 @@ sum(4,5)
  * @returns {undefined}
  */
 
-function sayHello(name){
+function sayHello(name) {
     console.log(`Hello, ${name}`);
 }
 
@@ -109,11 +110,27 @@ function sayHello(name){
 
 
 
-function powNum (base, power) {
-    if (power === 1){
+function powNum(base, power) {
+    if (power === 1) {
         return base;
     }
-    return base * powNum(base, power-1) 
+    return base * powNum(base, power - 1)
 }
 
-const powN = (base, power) => (power === 1) ? base : base * powNum(base, power-1)
+const powN = (base, power) => (power === 1) ? base : base * powNum(base, power - 1)
+
+
+
+const arrays = [2, 3, 2, 1, [4, 2, 3, [6, 3, 2, [3], 3, 3], 2]]
+
+function sumOfElements(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (Array.isArray(array[i])) {
+            sum += sumOfElements(array[i])
+        } else {
+            sum += array[i]
+        }
+    }
+    return sum;
+}
