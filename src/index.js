@@ -62,7 +62,7 @@ class Friend {
             return this.money;
         }
         if (Array.isArray(this.friend)) {
-            return this.friend.reduce((money, friend) => (money + friend.countMoney(), 0))
+            return this.money + this.friend.reduce((money, friend) => (money + friend.countMoney()), 0)
         }
         return this.money + this.friend.countMoney()
     }
@@ -95,7 +95,7 @@ class Worker {
     }
 
     set days(value) {
-        if (typeof(value) !== 'number') {
+        if (typeof value !== 'number') {
             throw new TypeError('days must a number')
         }
         if (value < 0) {
