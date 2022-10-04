@@ -134,3 +134,13 @@ function sumOfElements(array) {
     }
     return sum;
 }
+
+function fibo (numb) {
+    if (numb <= 1) {
+        return numb;
+    } else {
+        return fibo (numb-1) + fibo (numb-2)
+    }
+}
+
+const fibo2 = numb => numb<=1 ? numb : fibo2 (numb-1) + fibo2 (numb-2)
