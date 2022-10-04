@@ -18,3 +18,27 @@ class User {
 const Alex = new User('Alex', "Kovalenko", 24, '22@gmail.com')
 
 
+
+class Fuel {
+    constructor(volume, density){
+        this.volume = volume;
+        this.density = density;
+    }
+    weightOfFuel () {
+        return this.volume*this.density
+    }
+}
+
+const gasoline = new Fuel(900, 1,4)
+
+class Auto {
+    constructor (weightOfCar, fuel) {
+        this.weightOfCar = weightOfCar;
+        this.fuel = fuel;
+    }
+    allWeigthOfCar () {
+        return this.weightOfCar+this.fuel.weightOfFuel()
+    }
+}
+
+const BMW = new Auto(2000, gasoline)
