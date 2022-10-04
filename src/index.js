@@ -29,7 +29,7 @@ class Fuel {
     }
 }
 
-const gasoline = new Fuel(900, 1,4)
+const gasoline = new Fuel(50, 1.4)
 
 class Auto {
     constructor (weightOfCar, fuel) {
