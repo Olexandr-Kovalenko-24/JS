@@ -91,7 +91,7 @@ class Worker {
         this.#rate = value;
     }
 
-    get rate () {
+    get rate() {
         return this.#rate;
     }
 
@@ -105,7 +105,7 @@ class Worker {
         this._days = value;
     }
 
-    get days () {
+    get days() {
         return this._days;
     }
 
@@ -115,45 +115,51 @@ class Worker {
 }
 
 class Validator {
-    constructor (from, to) {
+    constructor(from, to) {
         this.from = from;
         this.to = to;
     }
 
-    set from(value) {
+    chekValue(value) {
         if (typeof value !== 'number') {
-            throw new TypeError('from must be a number')
+            throw new TypeError('from and to must be a number')
         }
-        this._from = value;
+        return true;
     }
 
-    get from () {
+    set from(value) {
+        if (this.chekValue(value)) {
+            this._from = value;
+        }
+    }
+
+    get from() {
         return this._from;
     }
 
     set to(value) {
-        if (typeof value !== 'number') {
-            throw new TypeError('to must be a number')
+        if (this.chekValue(value) && value > this._from) {
+            this._to = value;
+        } else {
+            throw new Error('Value is not correct')
         }
-        this._to = value;
     }
 
-    get to () {
+    get to() {
         return this._to;
     }
 
-    get range () {
+    get range() {
         let array = [];
-        for (let i = this._from; i <= this._to; i++){
+        for (let i = this._from; i <= this._to; i++) {
             array.push(i);
         }
         return array;
     }
 
-    isNumberInRange (number) {
-        if (this.range.includes(number)) {return true}
-        else {return false}
+    isNumberInRange(number) {
+        return this.range.includes(number)
     }
 }
 
-const val = new Validator(5,9)
+const val = new Validator(5, 9)
