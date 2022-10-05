@@ -191,3 +191,16 @@ class Cat extends Animal {
         return `${this.name} is sleeping`
     }
 }
+
+class Kitten extends Cat {
+    constructor(name, amountOfLegs, color) {
+        super(name, amountOfLegs, color);
+    }
+    makeNoize () {
+        return `${this.name} says 'Piiii'`
+    }
+    
+    sleep () {
+        return `${this.name} is noizy sleeping`
+    }
+}
