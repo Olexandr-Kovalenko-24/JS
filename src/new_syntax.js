@@ -27,6 +27,12 @@ class MyNewArray {
         };
         return arr;
     }
+
+    static isNewArray (obj) {
+        return obj instanceof MyNewArray;
+    }
 }
 
 const narr = new MyNewArray
+
+MyNewArray.isNewArray()
