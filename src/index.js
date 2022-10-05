@@ -127,7 +127,7 @@ class Validator {
         this._from = value;
     }
 
-    get rate () {
+    get from () {
         return this._from;
     }
 
