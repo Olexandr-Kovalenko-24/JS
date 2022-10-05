@@ -249,3 +249,15 @@ class Circle extends Figure {
         return Math.PI*(this.d*this.d /4)
     }
 }
+
+/**
+ * 
+ * @param {Figure} figure 
+ */
+function calculateArea (figure) {
+    return figure.getArea();
+}
+
+const crlc = new Circle(10);
+
+calculateArea(crcl);
