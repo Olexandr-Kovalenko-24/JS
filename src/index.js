@@ -77,6 +77,7 @@ const friend3 = new Friend('Tony', 100, [friend2, friend0]);
 
 
 class Worker {
+    #rate;
     constructor(name, rate, days) {
         this.name = name;
         this.rate = rate;
@@ -87,11 +88,11 @@ class Worker {
         if (value < 0) {
             throw new RangeError('rate must be < 0')
         }
-        this._rate = value;
+        this.#rate = value;
     }
 
     get rate () {
-        return this._rate;
+        return this.#rate;
     }
 
     set days(value) {
