@@ -217,7 +217,7 @@ class Figure {
 
 class Triangle extends Figure {
     constructor(a,b, angle){
-        supper(3);
+        super(3);
         this.a = a;
         this.b = b;
         this.angle = angle;
@@ -260,4 +260,30 @@ function calculateArea (figure) {
 
 const crlc = new Circle(10);
 
-calculateArea(crcl);
+// calculateArea(crcl);
+
+
+
+class Usern {
+    constructor(email, password, isBanned) {
+        this.email = email;
+        this.password = password;
+        this.isBanned = false;
+    }
+    sayHello (){
+        return `User say Hello!`
+    }
+}
+
+class Moderator extends User {
+    constructor(email, password){
+        super(email, password);
+    }
+    makeBan (obj) {
+        obj.isBanned = true;
+    }
+}
+
+const user1 = new Usern ('22@gmail.com', '123');
+const user2 = new Usern ('22@gmail.com', '123');
+const moder1 = new Moderator('gmail.com', '321')
