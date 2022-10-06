@@ -21,7 +21,7 @@ class MyNewArray {
     }
 }
     map () {
-        const arr = new MyArray();
+        const arr = new MyNewArray();
         for(let i = 0; i < this.length; i++){
         arr.push(callbackFunction(this[i]));
         };
