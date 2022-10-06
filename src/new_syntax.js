@@ -27,12 +27,40 @@ class MyNewArray {
         };
         return arr;
     }
+    concat (arr2) {
+        for (let i = 0; i < arr2.length; i++){
+            this.push(arr2[i]) 
+        }
+        return this;
+    }
 
+    flat () {
+        const res = new MyNewArray();
+        for (let i = 0; i < this.length; i++){
+            if (MyNewArray.isNewArray(this[i])) {
+                res.concat(this[i].flat());
+            } else {
+                res.push(this[i])
+            }
+        }
+        return res;
+    }
+    reverse (){
+        let len = this.length-1;
+        for (let i = 0; i<=len/2; i++){
+            let tmp = this[i];
+            this[i] = this [len - i];
+            this [len - i] = tmp;
+        }
+        return this;
+    }
     static isNewArray (obj) {
         return obj instanceof MyNewArray;
     }
 }
 
-const narr = new MyNewArray
 
-MyNewArray.isNewArray()
+
+const narr = new MyNewArray
+// [3,2,1,[2,1,[2,5,[2,3]]]]
+MyNewArray.isNewArray(narr)
