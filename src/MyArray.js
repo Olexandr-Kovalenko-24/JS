@@ -35,16 +35,5 @@ function MyArrayMethods (){
         return arr;
     }
 
-    [Symbol.iterator] = function () {
-        let i = 0;
-        return {
-            next: () => {
-                return {
-                    value: this[i++],
-                    done: i > this.length
-                }
-            }
-        }
-    }
 }
 

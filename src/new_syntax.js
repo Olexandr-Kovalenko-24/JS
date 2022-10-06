@@ -57,6 +57,18 @@ class MyNewArray {
     static isNewArray (obj) {
         return obj instanceof MyNewArray;
     }
+    
+    [Symbol.iterator] = function () {
+        let i = 0;
+        return {
+            next: () => {
+                return {
+                    value: this[i++],
+                    done: i > this.length
+                }
+            }
+        }
+    }
 }
 
 
