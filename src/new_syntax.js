@@ -54,10 +54,26 @@ class MyNewArray {
         }
         return this;
     }
+    indexOf (value){
+        for (let i = 0; i < this.length; i++){
+            if (this[i] === value) {
+                return i
+            }
+        }
+        return -1
+    }
+    includes (value){
+        for (let i = 0; i < this.length; i++){
+            if (this[i] === value) {
+                return true
+            }
+        }
+        return false
+    }
     static isNewArray (obj) {
         return obj instanceof MyNewArray;
     }
-    
+
     [Symbol.iterator] = function () {
         let i = 0;
         return {
