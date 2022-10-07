@@ -63,6 +63,7 @@ class LinkedList {
                 prevElement.next = nextElement;
             }
         }
+        this.length--;
     }
 }
 
