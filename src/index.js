@@ -65,7 +65,6 @@ class LinkedList {
         }
     }
 }
-}
 
 class LinkedListIterator {
     constructor(list) {
