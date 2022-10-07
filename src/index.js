@@ -1,33 +1,33 @@
 'use strict'
 
 class ListItem {
-    constructor(value){
+    constructor(value) {
         this.value = value;
         this.next = null;
         this.prev = null;
     }
 
-    get value(){
+    get value() {
         return this._value
     }
 
-    set value(v){
+    set value(v) {
         this._value = v;
     }
 }
 
 class LinkedList {
-    constructor(...args){
+    constructor(...args) {
         this.length = 0;
         this.head = null;
         this.tail = null;
 
-        for (const item of args){
+        for (const item of args) {
             this.push(item);
         }
     }
 
-    push(v){
+    push(v) {
         const newItem = new ListItem(v);
         if (this.length === 0) {
             this.head = newItem;
@@ -40,26 +40,48 @@ class LinkedList {
         return ++this.length
     }
 
-    deleteElement(value){
-        if (this.head.value === value){
-            const nextElement = this.head.next;
-            nextElement.prev = null;
-            this.head = nextElement;
-            this.length--;
+    deleteHeadElement() {
+        const nextElement = this.head.next;
+        nextElement.prev = null;
+        this.head = nextElement;
+        this.length--;
+    }
+
+    deleteTailElement() {
+        const prevElement = this.tail.prev;
+        prevElement.next = null;
+        this.tail = prevElement;
+        this.length--;
+    }
+
+    deleteElement(value) {
+        for (const item of this) {
+            if (item.value === value) {
+                const nextElement = item.next;
+                const prevElement = item.prev;
+                nextElement.prev = prevElement;
+                prevElement.next = nextElement;
+            }
+        }
+    }
+}
+}
+
+class LinkedListIterator {
+    constructor(list) {
+        this.list = list;
+        this.currentNode = null;
+    }
+    next() {
+        this.currentNode = this.currentNode ? this.currentNode.next : this.list.head
+        return {
+            // value: this.currentNode ? this.currentNode.value : undefined,
+            value: this.currentNode,
+            done: !this.currentNode,
         }
     }
 }
 
-class LinkedListIterator {
-    constructor(list){
-        this.list = list;
-        this.currentNode = null;
-    }
-    next () {
-        this.currentNode = this.currentNode ? this.currentNode.next : this.list.head
-        return {
-            value: this.currentNode ? this.currentNode.value : undefined,
-            done: !this.currentNode,
-        }
-    }
+[Symbol.iterator]() {
+    return new LinkedListIterator(this)
 }
