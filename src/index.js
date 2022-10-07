@@ -1,87 +1,55 @@
 'use strict'
 
-class ListItem {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-        this.prev = null;
+
+class Student {
+    constructor(name, lastName, yearIn){
+        this.name = name;
+        this.lastName = lastName;
+        this.yearIn = yearIn;
     }
 
-    get value() {
-        return this._value
-    }
-
-    set value(v) {
-        this._value = v;
+    getCourse () {
+    new Date().getFullYear()- this.yearIn
     }
 }
 
-class LinkedList {
-    constructor(...args) {
-        this.length = 0;
-        this.head = null;
-        this.tail = null;
-
-        for (const item of args) {
-            this.push(item);
-        }
+function getSeason(){
+    const month = new Date().getMonth();
+    if(month <= 1 || month === 11){
+        return 'winter'
+    } else if (month >=2 && month <=4){
+        return 'spring'
+    } else if (month >=5 && month <=7) {
+        return 'summer'
+    } else { 
+        return 'fall'
     }
+} 
 
-    push(v) {
-        const newItem = new ListItem(v);
-        if (this.length === 0) {
-            this.head = newItem;
-            this.tail = newItem;
-        } else {
-            this.tail.next = newItem;
-            newItem.prev = this.tail;
-            this.tail = newItem;
-        }
-        return ++this.length
-    }
 
-    deleteHeadElement() {
-        const nextElement = this.head.next;
-        nextElement.prev = null;
-        this.head = nextElement;
-        this.length--;
-    }
-
-    deleteTailElement() {
-        const prevElement = this.tail.prev;
-        prevElement.next = null;
-        this.tail = prevElement;
-        this.length--;
-    }
-
-    deleteElement(value) {
-        for (const item of this) {
-            if (item.value === value) {
-                const nextElement = item.next;
-                const prevElement = item.prev;
-                nextElement.prev = prevElement;
-                prevElement.next = nextElement;
-            }
-        }
-        this.length--;
-    }
+function getSeason2(){
+    const month = new Date().getMonth();
+switch(month) {
+    case 0:
+    case 1:
+    case 11:
+        return 'winter';
+    case 2:
+    case 3:
+    case 4:
+        return 'spring';
+    case 5:
+    case 6:
+    case 7:
+        return 'summer';
+    case 8:
+    case 9:
+    case 10:
+        return 'fall';
+    default:
+        return null;
+}
 }
 
-class LinkedListIterator {
-    constructor(list) {
-        this.list = list;
-        this.currentNode = null;
-    }
-    next() {
-        this.currentNode = this.currentNode ? this.currentNode.next : this.list.head
-        return {
-            // value: this.currentNode ? this.currentNode.value : undefined,
-            value: this.currentNode,
-            done: !this.currentNode,
-        }
-    }
-}
-
-[Symbol.iterator]() {
-    return new LinkedListIterator(this)
-}
+const date = new Date()
+console.log (`${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`)
