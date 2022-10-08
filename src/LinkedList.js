@@ -65,12 +65,12 @@ class LinkedList {
         }
         this.length--;
     }
-}
-
-class LinkedListIterator {
     [Symbol.iterator]() {
         return new LinkedListIterator(this)
     }
+}
+
+class LinkedListIterator {
     constructor(list) {
         this.list = list;
         this.currentNode = null;
