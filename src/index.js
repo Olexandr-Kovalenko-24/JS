@@ -1,7 +1,7 @@
 'use strict'
 
 class Stack {
-    constructor(maxSize, ...arr) {
+    constructor(maxSize = 10, ...arr) {
         this._maxSize = maxSize;
         this._size = 0;
         for (const item of arr) {
@@ -38,3 +38,33 @@ class Stack {
 }
 
 
+
+function isSymmetricalBraces(string) {
+    const stack = new Stack();
+    const {braces} = options;
+    for (const symb of string) {
+        if (braces[symb]) {
+            stack.push(symb);
+            continue;
+        }
+        if(stack.isEmpty){
+            return false;
+        }
+        const lastItemFromStack = stack.pick();
+        const correctCloseBrace = braces[lastItemFromStack];
+        if(symb === correctCloseBrace){
+            stack.pop();
+        } else {
+            return false;
+        }
+    }
+    return stack.isEmpty
+}
+
+const braces = {
+    '(':')',
+    '{':'}',
+    '[':']'
+}
+
+isSymmetricalBraces('[]({})', {braces})
