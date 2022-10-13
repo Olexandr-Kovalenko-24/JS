@@ -22,3 +22,29 @@ function translater(str,vocabulary){
 }
 
 
+const user1 = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 20,
+    email: 'test@gmail'
+}
+
+const user2 = {
+    firstName: 'Jane',
+    lastName: 'Snow',
+    age: 25,
+    email: 'test2@gmail'
+}
+
+const johnMassage = ['hello', 'how a y', 'go to walk'];
+const janeMassage = ['hi', 'i m fine', 'go!'];
+
+
+const mapMessage = new Map();
+mapMessage.set(user1, johnMassage);
+mapMessage.set(user2, janeMassage);
+
+
+
+
+
