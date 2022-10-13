@@ -42,6 +42,5 @@ function mergeQueues(q1, q2) {
             resQueue.enqueue(q2.dequeue())
         }
     }
-
     return resQueue;
 }
