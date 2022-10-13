@@ -39,22 +39,22 @@ class Stack {
 
 
 
-function isSymmetricalBraces(string) {
-    const stack = new Stack();
-    const {braces} = options;
+function isSymmetricalBraces(string, braces) {
+    const stack = new Stack(string.length);
+    const closeBraces = Object.values(braces);
     for (const symb of string) {
         if (braces[symb]) {
             stack.push(symb);
             continue;
         }
-        if(stack.isEmpty){
+        if(closeBraces.includes(symb) && stack.isEmpty){
             return false;
         }
         const lastItemFromStack = stack.pick();
         const correctCloseBrace = braces[lastItemFromStack];
         if(symb === correctCloseBrace){
             stack.pop();
-        } else {
+        } else if(closeBraces.includes(symb) || braces[symb]){
             return false;
         }
     }
@@ -67,4 +67,4 @@ const braces = {
     '[':']'
 }
 
-isSymmetricalBraces('[]({})', {braces})
+isSymmetricalBraces('[]({})', braces)
