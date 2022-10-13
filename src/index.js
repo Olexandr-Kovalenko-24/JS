@@ -50,9 +50,7 @@ function isSymmetricalBraces(string, braces) {
         if(closeBraces.includes(symb) && stack.isEmpty){
             return false;
         }
-        const lastItemFromStack = stack.pick();
-        const correctCloseBrace = braces[lastItemFromStack];
-        if(symb === correctCloseBrace){
+        if(symb === braces[stack.pick()]){
             stack.pop();
         } else if(closeBraces.includes(symb) || braces[symb]){
             return false;
