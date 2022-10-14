@@ -59,3 +59,16 @@ function getDiagonal(monitor){
     // return Math.sqrt(Math.pow(widthValue) + Math.pow(heigthValue))
     return Math.sqrt(widthValue**2 + heigthValue**2);
 }
+
+const {brightness, resolution, ...restOfObject} = monitor;
+
+
+
+function consoleValue({target: {value, name}}){
+    
+}
+
+
+function getFullName({name: {first, last}}){
+    return `${first} ${last}`
+}
