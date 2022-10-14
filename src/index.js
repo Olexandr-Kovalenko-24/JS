@@ -16,3 +16,46 @@ const map = new Map([[1, {username: 'john doe'}],
 const resTask = [...map.entries()].map((cortege)=>{
     return `${cortege[0]} - ${cortege[1].username}`
 })
+
+
+
+const userObj = {
+    name: {
+        first: 'John',
+        last: 'Doe'
+    },
+    age: 20,
+    auth: {
+        email: 'doe@gmail.com',
+        pass: '1234'
+    }
+}
+
+const {name: {first,last}} = userObj;
+const {auth: {pass}} = userObj;
+
+const monitor = {
+    sizes: {
+        width: {
+            value: 30,
+            scale: 'sm'
+        },
+        height: {
+            value: 20,
+            scale: 'sm'
+        }
+    },
+    brightness: {
+        value: 24000,
+        scale: 'lux'
+    },
+    resolution: '4k'
+}
+
+const {sizes: {width: {value: widthValue}}, brightness: {value: brightnessValue}} = monitor;
+
+function getDiagonal(monitor){
+    const {sizes: {width: {value: widthValue}, height: {value: heigthValue}}} = monitor
+    // return Math.sqrt(Math.pow(widthValue) + Math.pow(heigthValue))
+    return Math.sqrt(widthValue**2 + heigthValue**2);
+}
