@@ -32,7 +32,7 @@ class Queue {
 
 
 function mergeQueues(q1, q2) {
-    const mergeQ = new Queue();
+    const resQueue = new Queue();
     const maxLength = q1.size > q2.size ? q1 : q2;
     while (maxLength.size) {
         if (q1.size) {
