@@ -12,3 +12,13 @@ function makeCounter() {
         },
     }
 }
+
+function createAdder (n1){
+    return function (n2){
+        return n1=n1+n2;
+    }
+}
+
+const createAdder = (n1) => (n2) => n1+=n2
+
+createAdder(5)(7)
